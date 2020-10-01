@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Feature from "./Feature";
 
 class FeaturesForm extends Component {
-  state = {};
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => {
       return this.createFeature(feature, idx);

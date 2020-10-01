@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Feature from "./component/feature/FeaturesForm";
+import FeaturesForm from "./component/feature/FeaturesForm";
 import Cart from "./component/cart/Cart";
+import FEATURES from "./store/FeaturesStore";
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
@@ -47,10 +48,10 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <Feature
+          <FeaturesForm
             updateFeature={this.updateFeature}
             selectedStore={this.state.selected}
-            features={this.props.features}
+            features={FEATURES}
           />
           <Cart selectedStore={this.state.selected} />
         </main>
